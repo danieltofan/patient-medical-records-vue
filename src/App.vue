@@ -16,6 +16,7 @@
       </b-row>
       
       <b-row class="mt-5 p-3" id="results" tag="section">
+
         <b-col sm="12">
           <transition-group name="fade" mode="out-in">
             <b-spinner v-if="isLoading" class="mt-5 mx-auto" id="loader" variant="primary" label="Loading..." style="width: 6rem; height: 6rem;" key="spinner"></b-spinner>
@@ -43,7 +44,6 @@
               </b-table>
             </div>
           </transition-group>
-         
         </b-col>
         
       </b-row>
