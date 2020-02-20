@@ -23,4 +23,5 @@ Enhancements:
 - the loader is displayed superimposed on the table container in order to save space and make the app look better
 - while loading new data, the text color in the table is faded temporarily to move focus away from the data and emphasize the loading spinner
 - the table has additional formatting for a more pleasant look, including units for height and weight
+- transitions were used for showing/hiding the loader as well as table data, and subtle transitions were added to the table hover, both for a more pleasant l&f
 - the entire app is responsive, including the data table, following a mobile-first design pattern; no media queries were included since the information is sufficiently visible on small screen sizes
