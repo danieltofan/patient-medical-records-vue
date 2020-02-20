@@ -92,8 +92,7 @@ export default {
 <style>
 
 body {
-  font-family: var(--font-family-sans-serif) !important;
-  background-color: var(--body-background-color) !important;
+  background-color: #f3f7f7 !important;
 }
 
 #app {
@@ -156,6 +155,7 @@ tr:hover td {
 
 .text-muted {
   opacity: 0.5;
+  filter: blur(1px);
 }
 
 </style>
