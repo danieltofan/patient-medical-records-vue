@@ -28,6 +28,9 @@
               </div>
 
               <b-table v-if="patientRecords" striped hover responsive :fields="tableFields" :items="patientRecords" sort-by="date" :sort-desc="true" :tbody-tr-class="tableRowClass">
+                <template v-slot:head()="data">
+                  <span :class="[isLoading ? 'text-muted' : '']">{{data.label}}</span>
+                </template>
                 <template v-slot:cell(date)="data">
                    {{ data.item.date | moment('DD/MM/YYYY') }}
                 </template>
@@ -96,7 +99,7 @@ body {
 }
 
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Nunito', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
