@@ -5,7 +5,6 @@
     </b-navbar>
 
     <b-container>
-
       <b-row class="pt-5" id="patient-filter" tag="section">
         <b-col md="6" offset-md="2">
           <b-form-select v-model="selectedPatientId" :options="patients"></b-form-select>
