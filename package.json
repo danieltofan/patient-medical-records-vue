@@ -11,20 +11,20 @@
     "preinstall": "npx npm-force-resolutions"
   },
   "dependencies": {
-    "axios": "^0.19.2",
-    "bootstrap-vue": "^2.15.0",
-    "core-js": "^3.6.5",
-    "vue": "^2.6.11",
+    "axios": ">=0.21.1",
+    "bootstrap-vue": "^2.21.2",
+    "core-js": "^3.8.2",
+    "vue": "^2.6.12",
     "vue-moment": "^4.1.0",
-    "vuex": "^3.4.0"
+    "vuex": "^3.6.0"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.2.0",
-    "@vue/cli-plugin-vuex": "~4.2.0",
-    "@vue/cli-service": "~4.2.0",
+    "@vue/cli-plugin-babel": "^4.2.3",
+    "@vue/cli-plugin-vuex": "^4.2.3",
+    "@vue/cli-service": "^4.2.3",
     "minimist": "^1.2.5",
     "npm-force-resolutions": "0.0.3",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.12"
   },
   "resolutions": {
     "minimist": "^1.2.5"
