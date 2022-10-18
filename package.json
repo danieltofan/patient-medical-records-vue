@@ -20,8 +20,8 @@
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.2.3",
-    "@vue/cli-plugin-vuex": "^4.2.3",
-    "@vue/cli-service": "^4.2.3",
+    "@vue/cli-plugin-vuex": "^5.0.8",
+    "@vue/cli-service": "^5.0.8",
     "minimist": "^1.2.5",
     "npm-force-resolutions": "0.0.3",
     "vue-template-compiler": "^2.6.12"
