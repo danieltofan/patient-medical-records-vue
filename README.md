@@ -1,48 +1,173 @@
-# patient-medical-records-vue
+# CarePortal
 
-## Description
+A modern healthcare dashboard demo showcasing patient records, medical timelines, health metrics visualization, and AI-powered insights.
 
-The problem presented was implemented in Vue.js using the latest version of Vue CLI to generate the skeleton project.
-Bootstrap-vue was added for layout and to provide the components used: navbar, select, button, table, spinner.
-Vue-moment was added to format dates using moment.js, Vuex was added to provide a store for maintaining state.
-For simplicity, linting and testing tools were left out.
+![Vue 3](https://img.shields.io/badge/Vue-3.4-4FC08D?logo=vue.js)
+![Vite](https://img.shields.io/badge/Vite-5.0-646CFF?logo=vite)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38B2AC?logo=tailwindcss)
+![Tests](https://img.shields.io/badge/Tests-Vitest-6E9F18?logo=vitest)
 
-### All requirements described in problem.txt were implemented.
+## Live Demo
 
-### Strategy:
-- The Vuex store is the single source of truth and maintains the state of the loading indicator as well as provides reactive properties that the app uses.
-- A single component was used, as the problem is simple enough to not warrant multiple components. In a production app, the code would be broken down in smaller components.
-- When a new patient record is loaded, the component dispatches a store action, which loads the data from the API and commits mutations that change the state.
-- The App component takes advantage of reactive properties of the store (via getters) as well as internal computed properties.
-- CSS was preferred for simplicity but SCSS or Stylus could be used for greater flexibility.
+🚀 **[View Live Demo](https://danieltofan.github.io/patient-medical-records-vue/)**
 
-### Assumptions made:
-- The Ajax calls always succeed and there is no need for error checking, for simplicity
-- Selecting the null option in the select box ("Select Patient") does not clear the data table, as it is not a requirements
-- Changing the patient name requires a click on Show to load the new data, does not update the table on change
-- The view updates really quickly, it may be necessary to throttle the network in Chrome/Firefox dev tools to see the loader spinning
-- DOB was already formatted in the API data so no additional formatting was necessary
-- Not all styles were preserved as in the sample solution, as they were not deemed necessary; Bootstrap styles are used throughout, including for the spinner
+## Features
 
-### Enhancements:
-- The loader is displayed superimposed on the table container in order to save space and make the app look better
-- While loading new data, the text color in the table is faded and blurred temporarily to move focus away from the data and emphasize the loading spinner
-- The table has additional formatting for a more pleasant look, including units for height and weight
-- Transitions were used for showing/hiding the loader as well as table data, and subtle transitions were added to the table hover, both for a more pleasant l&f
-- The entire app is responsive, including the data table, following a mobile-first design pattern; no media queries were included since the information is sufficiently visible on small screen sizes
+### Patient Dashboard
+- **Patient Directory** - Searchable list with risk-level filtering
+- **Quick Stats** - Overview of total patients, high-risk cases, pending labs
+- **Risk Assessment** - Color-coded risk levels (Low/Medium/High)
 
+### Patient Profile
+- **Demographics** - Complete patient information with contact and insurance details
+- **Conditions & Allergies** - Visual badges for quick reference
+- **Current Medications** - Dosage, frequency, and purpose
 
-## Project setup
+### Medical Timeline
+- **Chronological History** - All visits, labs, procedures, and specialist consults
+- **Category Filtering** - Color-coded by specialty (cardiology, neurology, etc.)
+- **Doctor Attribution** - Full provider information for each event
+
+### Health Metrics
+- **Vitals Trend Charts** - Blood pressure, heart rate, and weight over time
+- **Interactive Visualization** - Switch between metrics with Chart.js
+- **Current vs Historical** - Compare present values to trends
+
+### AI Insights Panel
+- **Risk Score** - Calculated health risk with progress visualization
+- **Risk Factors** - Contributing conditions and demographics
+- **Smart Recommendations** - AI-generated health insights
+- **Alerts** - Important notifications for care team
+
+### Lab Results
+- **Comprehensive Table** - All test results with reference ranges
+- **Status Indicators** - Normal, borderline, and elevated flags
+- **Date Tracking** - Historical lab history
+
+## Tech Stack
+
+- **Framework:** Vue 3 with Composition API (`<script setup>`)
+- **Build Tool:** Vite 5
+- **Styling:** Tailwind CSS 3.4
+- **Routing:** Vue Router 4
+- **Charts:** Chart.js + vue-chartjs
+- **Testing:** Vitest + Vue Test Utils
+- **Deployment:** GitHub Pages
+
+## Project Structure
+
 ```
+src/
+├── assets/
+│   └── main.css          # Tailwind + custom styles
+├── components/
+│   ├── AIInsights.vue    # Risk score and AI recommendations
+│   ├── AppHeader.vue     # Navigation header
+│   ├── LabResults.vue    # Lab results table
+│   ├── MedicalTimeline.vue  # Medical history timeline
+│   ├── PatientCard.vue   # Patient list card
+│   ├── PatientHeader.vue # Patient detail header
+│   ├── StatsOverview.vue # Dashboard stats
+│   └── VitalsChart.vue   # Vitals trend chart
+├── data/
+│   └── patients.js       # Mock patient data (5 patients)
+├── router/
+│   └── index.js          # Vue Router config
+├── views/
+│   ├── Dashboard.vue     # Patient list view
+│   └── PatientDetail.vue # Individual patient view
+├── App.vue
+└── main.js
+```
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- npm or yarn
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/danieltofan/patient-medical-records-vue.git
+cd patient-medical-records-vue
+
+# Switch to careportal branch
+git checkout careportal
+
+# Install dependencies
 npm install
+
+# Start development server
+npm run dev
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
+### Available Scripts
+
+```bash
+npm run dev          # Start development server
+npm run build        # Build for production
+npm run preview      # Preview production build
+npm run test         # Run tests in watch mode
+npm run test:coverage # Run tests with coverage report
 ```
 
-### Compiles and minifies for production
+## Testing
+
+The project includes comprehensive unit tests for all components and utilities:
+
+```bash
+# Run tests
+npm run test
+
+# Run with coverage
+npm run test:coverage
 ```
-npm run build
-```
+
+Test coverage targets:
+- Data utilities: 100%
+- UI Components: 90%+
+- Overall: 85%+
+
+## Sample Data
+
+The demo includes 5 diverse patient profiles:
+
+| Patient | Age | Conditions | Risk Level |
+|---------|-----|------------|------------|
+| Sarah Chen | 39 | Type 2 Diabetes, Hypertension | Medium |
+| James Wilson | 66 | AFib, CAD, GERD | High |
+| Maria Rodriguez | 32 | Anxiety, Migraine | Low |
+| Robert Thompson | 48 | Hypertension, Gout | Medium |
+| Eleanor Davis | 79 | MCI, HTN, Glaucoma, Osteoporosis | High |
+
+Each patient includes:
+- 6+ months of vitals history
+- 5+ lab results
+- 6+ timeline events
+- AI-generated insights
+
+## Architecture Decisions
+
+1. **Vue 3 Composition API** - Modern, type-friendly API with better code organization
+2. **Static Mock Data** - No backend needed, fully functional demo
+3. **Tailwind CSS** - Utility-first styling for rapid development
+4. **Component-based** - Reusable, testable components
+5. **Client-side routing** - SPA experience with Vue Router
+
+## License
+
+MIT License - feel free to use this code for your own projects.
+
+## Author
+
+**Daniel Tofan**
+- GitHub: [@danieltofan](https://github.com/danieltofan)
+- LinkedIn: [Daniel Tofan](https://linkedin.com/in/danieltofan)
+- Portfolio: [danieltofan.ai](https://danieltofan.ai)
+
+---
+
+*This project demonstrates modern Vue.js development practices including component architecture, state management, responsive design, and comprehensive testing.*
