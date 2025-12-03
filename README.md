@@ -5,7 +5,8 @@ A modern healthcare dashboard demo showcasing patient records, medical timelines
 ![Vue 3](https://img.shields.io/badge/Vue-3.4-4FC08D?logo=vue.js)
 ![Vite](https://img.shields.io/badge/Vite-5.0-646CFF?logo=vite)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38B2AC?logo=tailwindcss)
-![Tests](https://img.shields.io/badge/Tests-Vitest-6E9F18?logo=vitest)
+![Tests](https://img.shields.io/badge/Tests-109_passing-6E9F18?logo=vitest)
+![Coverage](https://img.shields.io/badge/Coverage-99.87%25-brightgreen)
 
 ## Live Demo
 
@@ -94,9 +95,6 @@ src/
 git clone https://github.com/danieltofan/patient-medical-records-vue.git
 cd patient-medical-records-vue
 
-# Switch to careportal branch
-git checkout careportal
-
 # Install dependencies
 npm install
 
@@ -126,10 +124,14 @@ npm run test
 npm run test:coverage
 ```
 
-Test coverage targets:
-- Data utilities: 100%
-- UI Components: 90%+
-- Overall: 85%+
+**Current coverage: 99.87%**
+
+| Category | Statements | Branches | Functions |
+|----------|------------|----------|-----------|
+| Components | 100% | 97.76% | 100% |
+| Views | 99.77% | 96.07% | 100% |
+| Data | 99.55% | 95.74% | 100% |
+| Router | 100% | 100% | 100% |
 
 ## Sample Data
 
