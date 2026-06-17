@@ -1,0 +1,8 @@
+# CarePortal
+
+> CarePortal is a healthcare dashboard demo — patient records, clinical timeline, and AI-driven insights. A public showcase by Daniel Tofan.
+
+## Links
+
+- [CarePortal (live demo)](https://danieltofan.github.io/patient-medical-records-vue/): Healthcare dashboard demo with patient records, timeline, and AI insights.
+- [Daniel Tofan](https://danieltofan.ai/): Engineering leader, fractional CTO, and AI specialist.
